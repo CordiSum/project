@@ -1,0 +1,1288 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Это заголовок тайтл</title>
+		
+
+	<body>
+  <div id="xuy"></div>
+  
+  <script src="httpGet.js"></script>
+	<script>
+				
+<div class="class">
+<button>
+<div></div>
+  </button>
+</div>
+
+var 
+
+// var str= 'я учу яваскрипт'
+// var first = str.slice(0,1).toUpperCase() + str.slice(1);
+// alert(first);
+
+// var str = 'hello';
+// str = str[0].toUpperCase() + str.substr(1);
+// alert(str);
+
+// var str = 'hello';
+// str = str.split('');
+// str[0] = str[0].toUpperCase();
+// var result = str.join('');
+// alert(result);
+
+
+// var str = '123456';
+// var arr = str.split('');
+// var arr=arr.reverse();
+// var result = arr.join('');
+// console.log(result);
+
+
+// var str = '3751';
+// var arr = str.split('');
+// arr.sort(function (a, b) {
+// 	if (a > b) {
+// 		return 1;
+// 	}
+// })
+// console.log(arr);
+
+
+
+// var str = '3751';
+// var arr = str.split('');
+// arr.sort();
+// var result = arr.join('')
+// console.log(result);
+
+// var str = 'http://phphtml';
+// if (str.substr(0,7) == 'http://'){
+// alert('ДА');
+// }
+// else {
+// 	alert('нет')
+// }
+
+// var str = 'http://php.html';
+// if (str.substr(-5) == '.html'){
+// alert('ДА');
+// }
+// else {
+// 	alert('нет')
+// }
+
+// -----------------------------------------
+// мой ответ
+
+// while (true) {
+// 	var value = prompt('Enter number > 100');
+// 	if ( value >= 100 && value != null) break;
+
+// }
+
+// правильный ответ
+
+// var num;
+
+// do {
+//   num = prompt("Введите число больше 100?", 0);
+// } while (num <= 100 && num != null);
+
+// --------------------------------
+
+// var i = prompt('enter number > 100', 0 );
+// for (; i != null ; ) {
+// 	if  (i >= 100 && i != null) { 
+// 		break; 
+// 	}  else {
+// 		i = prompt('enter number > 100', 0 );
+// 	}
+// }
+
+// --------------------------------------
+// nextPrime:
+// for (var i = 2 ; i <= 10 ; i++) {
+
+// 	for (var j = 2 ; j < i ; j++) {
+// 		if (i % j == 0) continue nextPrime	; 
+			
+// 		}
+// 	alert(i);
+// }
+
+
+// -------------------------------
+// var browser = prompt('what browser you use')
+// if (browser == 'IE') {
+// 	alert( 'О, да у вас IE!' );
+// } else if (browser == 'Chrome' ||
+// 	browser == 'Firefox' ||
+// 	browser == 'Safari' ||
+// 	browser == 'Opera'
+// 	) {
+// 	alert( 'Да, и эти браузеры мы поддерживаем' );
+// } else {
+// 	alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+// }
+
+
+// var a = +prompt('a?', '');
+// switch (a) {
+// 	case 0: 
+// 	alert(0);
+// 	break;
+// 	case 1: 
+// 	alert(1);
+// 	break;
+// 	case 2:
+// 	case 3: 
+// 	alert( '2, 3' );
+// 	case 4: 
+// }
+
+
+// ---------------------
+// var age = prompt('ведите ваш возраст');
+// function checkAge(age) {
+//   return (age > 18) ? true : confirm('Разрешили родители?');
+// } checkAge(age)
+
+// -------------------------
+
+
+// var age = prompt('ведите ваш возраст');
+// function checkAge(age) {
+// 	return (age > 18) || confirm('Разрешили родители?');
+// } checkAge(age);
+
+// ------------------------
+
+// работает
+// var a = 3;
+// var b = 2;
+// function min() {
+// 	if (a < b) {
+// 		alert(a);
+// 	} else {
+// 		alert(b);
+// 	}
+// } min()
+
+// function min(a, b) { правильный ответ - но, не понятно как работает
+//   if (a < b) { 
+//     return a;
+//   } else {
+//     return b;
+//   }
+// }
+
+
+// function min(a, b) { выяснил как работает
+// 	if (a < b) {
+// 	console.log('a is less than b'); 
+
+// 		return a;
+// 	} else { 
+// 	console.log('b is less than a'); 
+
+// 		return b;
+// 	}
+
+// } 
+
+// min(4, 3);
+
+
+// function min(a, b) { 
+// 	if (a < b) {
+
+
+// 		return a;
+// 	} else { 
+
+
+// 		return b;
+// 	}
+
+// } 
+
+// alert( min(4, 5) );
+
+// --------------------
+// var x = prompt("x?", '');
+// var n = prompt("n?", '');
+// if ( n <= 1) {
+// 	alert('Степерь' + n + 'не поддерживается, введите целую степень')
+// } else {
+// 	alert(pow(x,n))
+// }
+// function pow(x, n) {
+// 	var result = x;
+// 	for (var i = 1; i < n ; i++) {
+// 		result *= x;
+// 	}
+// 	return result;
+// }
+
+// -------------------------------------------------
+// Рекурсия и стек
+// с помощью цикла
+// function sumTo(n) {
+// 	var sum = 0;
+// 	for (var i = 0; i <= n; i++) {
+// 		sum += i;
+// 	}
+// 	return sum;
+// }
+// alert(sumTo(100));
+
+// через рекурсию
+// function sumTo(n) {
+//   if (n == 1) return n; 
+//   return n + sumTo(n - 1);
+// }
+// alert( sumTo(100) );
+
+// арифметическая прогрессия по формуле sumTo(n) = n * (n + 1) / 2;
+// считаю самый быстрый способ
+// function sumTo(n) {
+// 	return n * ( n + 1 ) / 2;
+// }
+// alert(sumTo(100));
+
+
+// Вычислить факториал через рекурсию
+// function factorial(n) {
+// 	return (n != 1) ? n * factorial(n - 1) : 1;
+// }
+// alert(factorial(3));
+
+//Числа Фибонначи
+// function fib(n) {
+// 	return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+// }
+// alert( fib(3) ); 
+// из-за рекурсии выполняется долго, так как приходится хранить много вычислений одновреименно
+
+// более быстрый способ вычисления
+
+// function fib(n) {
+//     var a = 1,
+//         b = 1;
+//     for (var i = 3; i <= n; i++) {
+//         var c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+// console.log( fib(7));
+
+
+// ============================================
+// Глаза: Структуры данных
+
+// Числа
+
+// #Интерфейс суммы
+// var a = +prompt("Введите первое число" ,);
+// var b = +prompt("Введите второе число" ,);
+// console.log( a + b);
+
+// #Сложение цен
+// console.log( (0.1 * 10 + 0.2 * 10) /10 );
+// 
+// var result = 0.1 + 0.2;
+// console.log( +result.toFixed(5) );
+
+// #Формула БИне
+
+// function fibBinet(n) {
+// 	var phi = (1 + Math.sqrt(5)) / 2;
+// 	return Math.round(Math.pow( phi, n) / Math.sqrt(5))
+// }
+// console.log(fibBinet(77))
+
+//  Фиббоначи
+// function fib(n) {
+//   var a = 1,
+//     b = 0,
+//     x;
+//   for (i = 0; i < n; i++) {
+//     x = a + b;
+//     a = b
+//     b = x;
+//   }
+//   return b;
+// }
+// ================
+
+
+// Строки
+// #Сделать первый символ заглавным
+// var str = "вася";
+// var newStr = str.charAt(0).toUpperCase() + str.slice(1);
+// alert(newStr);
+
+
+// function newStr(str) {
+// 	if (!str) return str;
+
+// 	return str[0].toUpperCase() + str.slice(1).toLowerCase(); // Делает первую букву заглавной. Если все буквы заглавные, первая остается заглавной, остальные переводит в маленький.
+
+// }
+// console.log( newStr("вася") );
+
+// -----------------
+
+// #Проверьте спам 
+// function checkSpam(str) {
+
+//     var lowStr = str.toLowerCase();
+    
+//     if (~lowStr.indexOf("xxx") || ~lowStr.indexOf("viagra")) {
+//       return true;
+//     } else {
+//        return false;
+//     }
+// }
+// console.log( checkSpam('buy ViAgRA now') );
+// console.log( checkSpam('free xxxxx') );
+// console.log( checkSpam("innocent rabbit") );
+
+// тоже самое, но кароче запись
+// function checkSpam(str) {
+//       var lowerStr = str.toLowerCase();
+    
+//       return !!(~lowerStr.indexOf('viagra') || ~lowerStr.indexOf('xxx')); //чтоб вернуть обязательно Boollean(true или false) используем !! (двойное не) 
+//     }
+    
+//     alert( checkSpam('buy ViAgRA now') );
+//     alert( checkSpam('free xxxxx') );
+//     alert( checkSpam("innocent rabbit") );
+// -----------------
+
+// #4 Усечение строки
+// function truncate(str, maxlength) {
+
+//     if (str.length > maxlength)  {
+//         var newStr = str.slice(0, maxlength - 3) + "..." ;
+//         return newStr;
+//     } else {
+//         return str;
+//     }
+// }
+// console.log( truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) );
+// console.log( truncate("Всем привет!", 20
+// короткий вариант 
+// function truncate(str, maxlength) {
+//   return (str.length > maxlength) ?
+//     str.slice(0, maxlength - 3) + '...' : str;
+// }
+
+// #5 Выделить число
+// function extractCurrencyValue(str) {
+//     return +str.slice(1)
+// }
+// console.log( extractCurrencyValue("$120") )
+
+
+
+//=====================================
+
+// #5 Объекты как ассоциативные оъекты
+// var user = {
+//     name : "Serg",
+//     surname : "Petrovsiy",
+//
+// };
+// delete user.name;
+// console.log(user.name + " " + user.surname )
+//
+// var user = {};
+// user.name = "Вася";
+// user.surname = "Петров";
+// user.name = "Сергей";
+// delete user.name;
+// console.log(user.surname);
+
+// ====================================
+
+// #6 Объекты перебор свойств
+
+// # пределите пуст ли объект
+  //  function isEmpty(obj) {
+  //   for (var key in obj) {
+  //     return false;
+  //   }
+  //     return true;
+  // }
+
+  // var schedule = {};
+  
+  //   alert( isEmpty(schedule) ); // true
+    
+  //   schedule["8:30"] = "подъём";
+    
+  //   alert( isEmpty(schedule) ); // false
+// -----------------------------------
+
+  // # Сумма свойств
+//   var salaries = {
+//     "Вася": 100,
+//     "Петя": 300,
+//     "Даша": 250
+// };
+// var sum = 0;
+// for (var name in salaries) {
+//     sum += salaries[name];
+// }
+// console.log(sum);
+
+
+// -------------------------------
+// # Свойство с наибольшим значением
+// var salaries = {
+//     "Вася": 100,
+//     "Петя": 300,
+//     "Даша": 250
+// };
+
+// var max = 0;
+// var nameMax = "";
+// for (var name in salaries) {
+//     if (max < salaries[name]) {
+//         max = salaries[name];
+//         nameMax = name;
+//     }
+// }
+// console.log(nameMax || "no workers");
+
+//---------------------------------- 
+// # Умножьте численные свойства на 2
+// var menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// };
+// function isNumeric(n) {
+//     return !isNaN(parseFloat(n)) && isFinite(n)
+// }
+// function multiplyNumeric(obj) {
+//     for (var key in obj) {
+
+//         if (isNumeric(obj[key])) {
+//             obj[key] *= 2;
+//         }
+//     }
+// }
+// multiplyNumeric(menu);
+// console.log('with: ' + menu.width + ', height: ' +  menu.height)
+
+
+// #6 =======================
+
+// # Получить последний элемент массива
+// var goods = ['one', 'two', 'three', 'four'];
+// console.log(goods.length);
+// var lastGoods = goods[goods.length - 1];
+// console.log(lastGoods);
+// console.log(goods.length);
+// -----------------------------
+
+// # Добавить новый элемент в массив
+// var goods = ['one', 'two', 'three', 'four'];
+// goods.push('computer');
+// console.log(goods[goods.length - 1]);
+// -----------------------------
+
+// # Создание массива
+// var styles = ['jazz', 'blues'];
+// console.log(styles);
+// styles.push('rock-n-roll')
+// console.log(styles);
+// styles[styles.length - 2] = 'classic';
+// console.log(styles);
+// console.log(styles.shift());
+// console.log(styles);
+// styles.unshift('Rap', 'Reggi');
+// console.log(styles);
+// -----------------------------
+
+// # Получите случайное значение
+// var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+// var rand = Math.floor(Math.random() * arr.length);
+// console.log(arr[rand]);
+// -----------------------------
+
+// # Создайте калькулятор для введённых значений
+// var numbers = [];
+// while (true) {
+//   var value = prompt("Enter number", 0 );
+//   if (value === "" || value === null || isNaN(value)) break;
+//     numbers.push(+value);
+// }
+// var sum = 0;
+// for (var i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+// }
+// alert(sum);
+// ----------------------------
+
+// # Поиск в массиве
+// var arr = ["test", 2, 1.5, false];
+// function find(array, value) {
+//     for (var i = 0; i < array.length; i++) {
+//         if (array[i] === value)  return i;
+//     }
+//     return  -1;
+// }
+// console.log(find(arr, "test")); // 0
+// console.log(find(arr, "test")); // 1
+// console.log(find(arr, 1.5)); // 2
+// console.log(find(arr, 0));
+
+
+// #7 Массивы: методы ==========================
+
+
+
+// -----Добавить класс в строку----
+
+// function addClass(obj, cls) {
+//     var classes = obj.className ? obj.className.split(' ') : [];
+
+//     for (var i = 0; i < classes.length; i++) {
+//         if (classes[i] == cls) return;
+//     }
+//     classes.push(cls);
+
+//     obj.className = classes.join(' ');
+// }
+
+// var obj = {
+//     className: 'open menu'
+// };
+
+// addClass(obj, 'new');
+// addClass(obj, 'open');
+// addClass(obj, 'me');
+// console.log(obj.className)
+
+// -----------------------------
+
+// Перевести текст вида border-left-width в borderLeftWidth
+// function camelize(str) {
+//   var arr = str.split('-');
+
+//   for (var i = 1; i < arr.length; i++) {
+//     // преобразовать: первый символ с большой буквы
+//     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+//   }
+
+//   return arr.join('');
+// }
+
+// alert( camelize("background-color") ); // backgroundColor
+// alert( camelize("list-style-image") ); // listStyleImage
+// alert( camelize("-webkit-transition") );
+
+
+// Функция removeClass ------------------------
+// function removeClass(obj, cls) {
+// 	var classes = obj.className.split(' ');
+
+// 	for (var i = 0; i < classes.length; i++) {
+// 		if (classes[i] == cls) {
+// 			classes.splice(i, 1);
+// 			i--;
+// 		}
+// 	}
+// 	  obj.className = classes.join(' ');
+// }
+
+// var obj = {
+//   className: 'open menu menu'
+// }
+
+// removeClass(obj, 'blabla');
+// removeClass(obj, 'menu');
+// alert(obj.className) // open
+// --------------------------------------
+
+// Фильтрация массива "на месте" --------
+
+// function filterRangeInPlace(arr, a, b) {
+// 	for (var i = 0; i < arr.length; i++) {
+// 		var value = arr[i];
+// 		if (value < a || value > b) {
+// 			arr.splice(i--, 1);
+// 		}
+// 	}
+// }
+
+// var arr = [5, 3, 8, 1, 9, 7, 6, 2];
+
+// filterRangeInPlace(arr, 1, 4);
+// alert( arr );
+// ------------------------------------
+
+// Сортировать в обратном порядке ------
+
+// function sortNumber (a,b) {
+// 	if (a > b) return -1;
+// 	if (a < b) return 1;
+// }
+
+// var arr = [5, 2, 1, -10, 8];
+
+// arr.sort(sortNumber);
+
+// alert(arr);
+
+//  вариант решения
+// var arr = [5, 2, 1, -10, 8];
+
+// function compareReversed(a, b) {
+//   return b - a;
+// }
+
+// arr.sort(compareReversed);
+
+// alert( arr );
+// ------------------------------------
+
+// Скопировать и отсортировать массив ----
+// var arr = ["HTML", "JavaScript", "CSS"];
+// var arrSorted = arr.slice().sort();
+// alert( arrSorted ); // CSS, HTML, JavaScript
+// alert( arr );
+
+//  Случайный порядок в массиве ---------
+// var arr = [1, 2, 3, 4, 5];
+// function arrRandom(a, b) {
+// 	return Math.random() -0.5;
+// }
+// arr.sort(arrRandom);
+// alert( arr );
+// -------------------------------------
+
+// Сортировка объектов -----------------
+// function compareAge(personA, personB) {
+// 	return personA.age - personB.age;
+// }
+
+// var vasya = { name: "Вася", age: 23 };
+// var masha = { name: "Маша", age: 18 };
+// var vovochka = { name: "Вовочка", age: 6 };
+
+// var people = [ vasya , masha , vovochka ];
+
+// people.sort(compareAge);
+
+// for (var i = 0; i < people.length; i++) {
+// 	alert(people[i].name);
+// }
+// ------------------------------------
+
+// Напишите функцию printList(list), которая выводит элементы списка по очереди, при помощи цикла.
+// function printList(list) {
+// 	var tmp = list;
+// 	while (tmp) {
+// 		console.log(tmp.value); // { value: 1 }
+// 		tmp = tmp.next;
+// 	}
+// }
+// var list = { value: 1 };
+// list.next = { value: 2 };
+// list.next.next = { value: 3 };
+// list.next.next.next = { value: 4 };
+// printList(list)
+// Напишите функцию printList(list) при помощи рекурсии.
+
+// var list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+// var i = 0;
+// function printReverseList(list) {
+// 	i = i+1;
+//   	console.log('Вход в функцию' + i);
+//   if (list.next) {
+//     printReverseList(list.next);
+//   }
+//   console.log('Продолжение' + i);
+
+//   console.log( list.value );
+// }
+// printReverseList(list);
+
+// =====================================
+
+// Псевдомассив аргументов "arguments"
+
+// Сумма аргументов --------------------
+
+// function sum() {
+// 	var result = 0;
+
+// 	for (var i = 0; i < arguments.length; i++) {
+// 		result += arguments[i];
+// 	}
+// 	return result;
+// }
+// alert(sum() );
+// alert(sum(1) );
+// alert(sum(1, 2) );
+// alert(sum(1, 2, 3) );
+// alert(sum(1, 2, 3, 4) );
+
+// ======================================
+
+// Дата и время
+
+//  Создать дату-----------------------
+// var d = new Date(2019, 2, 25, 17, 20);
+// alert(d);
+// ------------------------------------
+
+// Имя дня недели ----------------------
+// function getWeekDay(date) {
+// 	var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+// 	return days[date.getDay()];
+// }
+// var date = new Date(2019, 2, 25); // 3 января 2014
+// alert( getWeekDay(date) );
+
+// вариант для современных браузеров----
+//  var date = new Date(2014, 0, 3); // 3 января 2014
+// alert( date.toLocaleString('ru', {weekday: 'short'}) );
+
+// --------------------------------------
+
+// =========Замыкания, область видимости=====================================
+// =========Глобальные переменные========
+
+// var a = 5;
+// alert(window.a);
+
+// // присваивание в явном виде
+// window.a = 5;
+// alert(a);
+// ----------------------------------------
+
+// -----------Возврат функции
+// function makeCounter() {
+//   var currentCount = 1;
+
+//   return function() { // (**)
+//     return currentCount++;
+//   };
+// }
+
+// var counter = makeCounter(); // (*)
+
+// // каждый вызов увеличивает счётчик и возвращает результат
+// alert( counter() ); // 1
+// alert( counter() ); // 2
+// alert( counter() ); // 3
+
+// // создать другой счётчик, он будет независим от первого
+// var counter2 = makeCounter();
+// alert( counter2() ); // 1
+// alert( counter2() );
+// alert( counter2() );
+// ------------------------------------------
+
+// Сумма через замыкание
+// function sum(a) {
+  
+//   var currentSum = a;
+  
+//   function f(b) {
+//     currentSum += b;
+//     return f;
+//   }
+  
+//   f.toString = function() {
+//     return currentSum;
+//   }
+  
+  
+//   return f;
+// }
+
+// alert( sum(1)(2) ); // 3
+// alert( sum(5)(-1)(2) ); // 6
+// alert( sum(6)(-1)(-2)(-3) ); // 0
+// alert( sum(0)(1)(2)(3)(4)(5) ); 
+
+// =============================================
+
+
+
+// var calculator = {
+//   sum: function() {
+//     return this.a + this.b;
+//   },
+
+//   mul: function() {
+//     return this.a * this.b;
+//   },
+
+//   read: function() {
+//     this.a = +prompt('a?', 0);
+//     this.b = +prompt('b?', 0);
+//   }
+// }
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+// =================================================
+
+
+// Создать Calculator при помощи конструктора
+
+// var calculator = new Calculator();
+// calculator.read();
+
+// function Calculator() { 
+
+//   this.read = function() {
+//     this.a = +prompt("Введите число а", 0 );
+//     this.b = +prompt("Введите второе число b", 0);
+//   };
+
+//   this.sum = function() {
+//    return this.a + this.b;
+//   };
+
+//   this.mul = function() {
+//     return this.a * this.b;
+//   }
+
+// }
+
+// alert( "Сумма=" + calculator.sum() );
+// alert( "Произведение=" + calculator.mul() );
+
+// ================================
+
+// Создать Accumulator при помощи конструктора
+
+// function Accumulator(startingValue) { 
+// this.value = startingValue;
+
+//   this.read = function() {
+//     this.value += +prompt("Сколько еще прибавить?")
+//   };
+// }
+
+// var accumulator = new Accumulator(1); 
+// accumulator.read(); 
+// accumulator.read(); 
+// alert( accumulator.value );
+
+// =============================
+// var vasya = new User("Василий Попкин");
+
+// function User(fullName) {
+//   this.fullName = fullName;
+
+//   Object.defineProperties(user, {
+//     firstName: {
+//       value: "Петя"
+//     },
+
+//     lastName: {
+//       value: "Иванов"
+//     },
+
+//     fullName: {
+//       get: function() {
+//         return this.firstName + ' ' + this.lastName;
+//       }
+//     }
+
+//   });
+
+// }
+// alert(vasya.fullName);
+// alert( vasya.firstName ); // Василий
+// alert( vasya.lastName );
+// vasya.lastName = 'Сидоров';
+// alert( vasya.fullName );
+// ======= не правильно 
+
+// ======= ВЕРНОЕ РЕШЕНИЕ
+// function User(fullName) {
+//   this.fullName = fullName;
+
+//   Object.defineProperties(this, {
+
+//     firstName: {
+
+//       get: function() {
+//         return this.fullName.split(' ')[0];
+//       },
+
+//       set: function(newFirstName) {
+//         this.fullName = newFirstName + ' ' + this.lastName;
+//       }
+
+//     },
+
+//     lastName: {
+
+//       get: function() {
+//         return this.fullName.split(' ')[1];
+//       },
+
+//       set: function(newLastName) {
+//         this.fullName = this.firstName + ' ' + newLastName;
+//       }
+
+//     }
+
+//   });
+// }
+
+// var vasya = new User("Василий Попкин");
+
+// // чтение firstName/lastName
+// alert( vasya.firstName ); // Василий
+// alert( vasya.lastName ); // Попкин
+
+// // запись в lastName
+// vasya.lastName = 'Сидоров';
+
+// alert( vasya.fullName ); // Василий Сидоров
+// =============================================
+
+// ------- СЧетчик объектов --------------------
+//   function Article() {
+//     this.created = new Date();
+
+//     Article.count++;
+//     Article.last = this.created;
+// }
+
+// Article.count = 0;
+
+// Article.showStats = function() {
+//   alert( "Всего: " + this.count + ', Последняя: ' + this.last); // (1)
+// }
+
+// new Article();
+// new Article();
+// Article.showStats(); // Всего: 2, Последняя: (дата)
+// new Article();
+// Article.showStats(); // Всего: 3, Последняя: (дата)
+
+//  ================================================
+
+
+// --------- Перепишите суммирование аргументов ----
+// function sumArgs() {
+  
+//   arguments.reduce = [].reduce;
+//   return arguments.reduce(function(a,b){
+//     return a + b;
+//   });
+
+// }
+// alert( sumArgs(1, 2, 3) );
+// -----------------
+
+// function sumArgs() {
+  
+//   return [].reduce.call(arguments, function(a, b) {
+//     return a + b;
+//   })
+// }
+// alert( sumArgs(1, 2, 3) );
+
+// ====================================================
+
+// ------------------- Счетчик объектов ---------------
+  // function Article() {
+  //   this.created = new Date();
+  //   Article.count++;
+  //   Article.last = this.created;
+  // }
+
+  // Article.count = 0;
+
+  // Article.showStats = function() {
+  //   alert("Всего: " + this.count + " последняя: " + this.last);
+  // }
+
+  // new Article();
+  // new Article();
+
+  // Article.showStats(); // Всего: 2, Последняя: (дата)
+
+  // new Article();
+
+  // Article.showStats();
+
+//  ==================================================
+
+//  ------------------ Использование функции вопросов
+// Решение через замыкание
+// function ask(question, answer, ok, fail) {
+//   var result = prompt(question, '');
+//   if (result.toLowerCase() == answer.toLowerCase()) ok();
+//   else fail();
+// }
+
+// var user = {
+//   login: 'Василий',
+//   password: '12345',
+
+//   loginOk: function() {
+//     alert( this.login + ': вошёл в сайт' );
+//   },
+
+//   loginFail: function() {
+//     alert( this.login + ': ошибка входа' );
+//   },
+
+//   checkPassword: function() {
+//     var self = this;
+//     ask("Ваш пароль?", this.password,
+
+//       function() {
+//         self.loginOk();
+//       },
+
+//       function() {
+//          self.loginFail();
+//       }
+//     );
+//   }
+// };
+
+// user.checkPassword();
+
+// ------ Решение через bind 
+
+// "use strict";
+// function ask(question, answer, ok, fail) {
+//   var result = prompt(question, '');
+//   if (result.toLowerCase() == answer.toLowerCase()) ok();
+//   else fail();
+// }
+
+// var user = {
+//   login: 'Василий',
+//   password: '12345',
+
+//   loginOk: function() {
+//     alert( this.login + ' вошёл в сайт' );
+//   },
+
+//   loginFail: function() {
+//     alert( this.login + ': ошибка входа' );
+//   },
+
+//   checkPassword: function() {
+//     ask("Ваш пароль?", this.password, this.loginOk.bind(this), this.loginFail.bind(this));
+//   }
+// };
+
+// var vasya = user;
+// user = null;
+// vasya.checkPassword();
+
+//  ============================================
+
+
+
+// ------------ Использование функции вопросов с каррингом
+//  -------------------  через bind
+
+// "use strict";
+
+// function ask(question, answer, ok, fail) {
+//   var result = prompt(question, '');
+//   if (result.toLowerCase() == answer.toLowerCase()) ok();
+//   else fail();
+// }
+
+// var user = {
+//   login: 'Василий',
+//   password: '12345',
+
+//   // метод для вызова из ask
+//   loginDone: function(result) {
+//     alert( this.login + (result ? ' вошёл в сайт' : ' ошибка входа') );
+//   },
+
+//   checkPassword: function() {
+//     ask("Ваш пароль?", this.password, this.loginDone.bind(this, true) , this.loginDone.bind(this, false) );
+//   }
+// };
+
+// var vasya = user;
+// user = null;
+// vasya.checkPassword();
+
+//  ------------ Через локальную переменную -----
+
+// "use strict";
+
+// function ask(question, answer, ok, fail) {
+//   var result = prompt(question, '');
+//   if (result.toLowerCase() == answer.toLowerCase()) ok();
+//   else fail();
+// }
+
+// var user = {
+//   login: 'Василий',
+//   password: '12345',
+
+//   loginDone: function(result) {
+//     alert( this.login + (result ? ' вошёл в сайт' : ' ошибка входа') );
+//   },
+
+//   checkPassword: function() {
+//     var self = this;
+//     ask("Ваш пароль?", this.password,
+//       function() {
+//         self.loginDone(true);
+//       },
+//       function() {
+//         self.loginDone(false);
+//       }
+//     );
+//   }
+// };
+
+// user.checkPassword();
+
+  
+//   function printNumbersIntercal()   {
+//     var i = 1;
+//     var timerId = setTimeout(function go() {
+//       console.log(i);
+//       if (i < 20) clearTimeout(go, 100);
+//       i++;
+//     }, 100);
+//   }
+
+// printNumbersIntercal();
+
+// function printNumbersTimeout20_100() {
+//   var i = 1;
+//   var timerId = setTimeout(function go() {
+//     console.log(i);
+//     if (i < 20) clearTimeout(go, 100);
+//     i++;
+//   }, 100);
+// }
+
+// // вызов
+// printNumbersTimeout20_100();
+
+// ========================================
+
+//  Геттеры и Сеттеры -------------
+
+// Написать объект с геттерами и сеттерами
+// function User() {
+//   var firstName, surname;
+  
+//   this.setFirstName = function(newFirstName) {
+//     firstName = newFirstName;
+//   };
+  
+//   this.setSurname = function(newSurname) {
+//     surname = newSurname;
+//   };
+  
+//   this.getFullName = function() {
+//     return firstName + ' ' + surname; 
+//   }
+  
+// }
+
+// var user = new User();
+// user.setFirstName("Петя");
+// user.setSurname("Иванов");
+
+// console.log( user.getFullName() );
+
+// =========================================
+
+//  Свои ошибки, наследование от Error
+// Задача - Унаследуйте от SyntaxError
+// function FormatError(message) {
+
+//   this.name = "FormatError";
+//   this.message = message;
+
+//     if (Error.captureStackTrace) {
+//       Error.captureStackTrace(this, this.constructor);
+//     } else {
+//       this.stack = (new Error()).stack;
+//     }
+// }
+
+// FormatError.prototype = Object.create(SyntaxError.prototype);
+// FormatError.prototype.constructor = FormatError;
+
+
+// var err = new FormatError("ошибка форматирования");
+
+// alert( err.message ); // ошибка форматирования
+// alert( err.name ); // FormatError
+// alert( err.stack ); // стек на момент генерации ошибки
+
+// alert( err instanceof SyntaxError ); // true
+// ===============================================
+
+//        Проверка существования (дочерних)детей 
+// var div = document.body.children[0];
+// alert('СУществует див' + div);
+
+// if (div.firstChild.length) { document.documentElement 
+
+// alert('СУществует дочерние');
+// }
+// ============================================
+
+// var arr = [2, 5, 10, 6];
+// var arr2 = arr.splice(1,1);
+// console.log(arr);
+
+
+
+
+
+// var div = document.createElement('div');
+// div.className = "alert alert-success";
+// div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
+
+var div = document.createElement('div');
+ssss
+			</script>
+
+	</head>
+	</body>
+</html>
