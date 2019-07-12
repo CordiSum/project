@@ -9,6 +9,14 @@ var appData = {
     optionalExpenses: {},
     income: [],
     savings: false
-}
+};
+var answer1 = prompt("Введите обязательную статью расходов в этом месяце?", "");
+var answer2 = prompt("Во сколько обойдется?", "");
+var answer3 = prompt("Введите обязательную статью расходов в этом месяце?", "");
+var answer4 = prompt("Во сколько обойдется?", "");
 
-alert("Ваш бюджет на день составит:" + (money/30) );
+appData.expenses.answer1 = answer2;
+appData.expenses.answer3 = answer4;
+
+
+alert("Ваш бюджет на день составит:" + (appData.budget/30) );
