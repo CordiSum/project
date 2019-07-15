@@ -98,10 +98,65 @@
 
 // --------------------
 
-let str = 'test';
-console.log(str.length);
+// let str = 'test';
+// console.log(str.length);
 
-console.log( str.toUpperCase() );
-console.log( str.toLowerCase() );
+// console.log( str.toUpperCase() );
+// console.log( str.toLowerCase() );
 
 
+// let twelve = '12.2';
+
+// console.log( Math.round(twelve) );
+
+// let twelve = '12.2px';
+
+// console.log( parseInt(twelve) );
+// console.log( parseFloat(twelve) );
+// ==================================
+
+//  Объяснение замыкания https://medium.com/nuances-of-programming/%D1%8F-%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-%D1%87%D0%B0%D1%81%D1%82%D1%8C-%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-3c3f02041970
+//  let a = 3
+//  function addTwo(x) {
+//    let ret = x + 2
+//     return ret
+// }
+// let b = addTwo(a)
+// console.log(b)
+
+// let val1 = 2
+//  function multiplyThis(n) {
+//    let ret = n * val1
+//    return ret
+//  }
+//  let multiplied = multiplyThis(6)
+//  console.log('example of scope:', multiplied)
+// // ----------------------------------------------------
+//  let val = 7
+//  function createAdder() {
+//     function addNumbers(a, b) {
+//       let ret = a + b
+//     return ret
+//    }
+//  /*7*/  return addNumbers
+//  }
+//  let adder = createAdder()
+//  let sum = adder(val, 8)
+//  console.log('example of function returning a function: ', sum)
+
+// //  функция замаыкание
+//             function createCounter() {
+//     /*2:*/   let counter = 0
+//     /*3:*/   const myFunction = function() {
+//     /*4:*/     counter = counter + 1
+//     /*5:*/     return counter
+//     /*6:*/   }
+//     /*7:*/   return myFunction
+//     /*8:*/ }
+//     /*9:*/ const increment = createCounter()
+//    /*10:*/ const c1 = increment()
+//    /*11:*/ const c2 = increment()
+//    /*12:*/ const c3 = increment()
+//     console.log('example increment', c1, c2, c3)
+
+// =============================================
