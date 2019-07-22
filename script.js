@@ -270,8 +270,52 @@
 
 // Примеры ---------------------------------------------
 
-let ans = prompt('', ''),
-    arr = [];
+// let ans = prompt('', ''),
+//     arr = [];
 
-arr = ans.split(',');
-console.log(arr);
+// arr = ans.split(',');
+// console.log(arr);
+
+//  ----------- 
+
+// let arr = ['asda', 'zzz', 'pppp', 'rrrrr'],
+//     i = arr.join(', ');
+// console.log(i);
+
+//  ---------- сортировка по алфавиту
+
+// let arr = ['asda', 'zzz', 'pppp', 'rrrrr'],
+//     i = arr.sort(', ');
+// console.log(arr);
+
+// // ------- сортировка цифр
+
+// let arr = [1, 15, 4, -4],
+//     i = arr.sort(compareNum);
+
+// function compareNum(a, b) {
+//     return a-b;
+// }
+
+// console.log(arr);
+
+
+// ============================================
+
+// 16. ООП ====================================
+
+// let soldier = {
+//     health: 400,
+//     armor: 200
+// }
+
+// let john = {
+//     health: 100
+// };
+
+// john.__proto__ = soldier;
+
+// console.log(john);
+// console.log(john.armor);
+
+// ============================================
