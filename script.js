@@ -407,6 +407,8 @@ var box = document.getElementById('box'),
 
     box.style.backgroundColor = 'blue';
     btn[1].style.borderRadius = '100%';
+
+    console.log('box');
 // ============================================
 
 
