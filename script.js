@@ -324,6 +324,7 @@
 
 // - to String
 // 1) 
+<<<<<<< HEAD
 // console.log(typeof(String(null)));
 // console.log(typeof(String(4)));
 
@@ -347,6 +348,31 @@
 // // 3)
 // console.log(typeof(parseInt('15px', 10)));
 // let ans = +prompt('Hello', '');
+=======
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
+
+// 2) Конкатенация
+console.log('ww' + 'err');
+console.log('ww' + 5);
+console.log( typeof('q' + 5));
+console.log( typeof('q' + false));
+console.log( typeof('' + false));
+console.log('http://vk.com/catalog/' + 5);
+
+// - to Number
+
+// 1) 
+console.log(typeof(Number('5')));
+
+// 2) унарный плюс 
+console.log(typeof(+'5'));
+console.log(typeof(5 + +'5'));
+
+// 3)
+console.log(typeof(parseInt('15px', 10)));
+let ans = +prompt('Hello', '');
+>>>>>>> de4e8af2ca9db09ab353f9d6e07754ce0a349b23
 
 // 4) 
 // 0, '', null, undefined, NaN    это всегда false
@@ -369,6 +395,7 @@
 // // 6)
 // console.log(typeof(!!'5'));
 
+<<<<<<< HEAD
 // ============================================
 
 // 19 Получение элементов со страницы =========
@@ -386,3 +413,6 @@ var box = document.getElementById('box'),
     console.log(heart[1]);
     console.log(oneHeart);
 // ============================================
+=======
+// ============================================
+>>>>>>> de4e8af2ca9db09ab353f9d6e07754ce0a349b23
