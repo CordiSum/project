@@ -440,11 +440,8 @@ var box = document.getElementById('box'),
     document.body.replaceChild(btn[1], circle[1]);
 
     console.log(div);
-
-
-
-
 // ============================================
+
 
 
 
