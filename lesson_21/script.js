@@ -32,3 +32,12 @@ btn.forEach(function(item) {
 // btn[0].addEventListener('mouseenter', function() {
 //     alert('Вы навели на первую кнопку');
 // });
+
+const person = {
+    name: 'Lydia',
+    age: 21
+};
+
+for (const item in person[name]) {
+    console.log(item)
+}
