@@ -1,0 +1,29 @@
+.wrapper-box {
+    border: 2px solid green;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    position: relative
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    position: absolute;
+}
+
+.btn-block {
+    position: relative;
+    background-color: grey;
+    height: auto;
+    width: 100%;
+}
+
+.btn-block button {
+    background-color: yellow;
+    width: 80px;
+    height: 30px;
+    margin: 10px 0 10px 10px;
+    border: none;
+}
