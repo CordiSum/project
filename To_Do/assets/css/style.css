@@ -155,7 +155,10 @@ ul {
   margin-right: 10px;
 }
 
-[type=reset]:hover, [type=submit]:hover, button:hover, html [type=button]:hover {
+[type=reset]:hover,
+[type=submit]:hover,
+button:hover,
+html [type=button]:hover {
   cursor: pointer;
   border: 2px solid #017585;
   border-radius: 10px;
