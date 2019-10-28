@@ -1,4 +1,6 @@
 function onPageLoaded() {
+    const pencil = document.querySelector('#pencil');
+
     const saveButton = document.querySelector('button.save');
     const clearButton = document.querySelector('button.clear');
     const showTipsButton = document.querySelector('button.showTips');
@@ -7,6 +9,11 @@ function onPageLoaded() {
 
     const ul = document.querySelector('ul.todos');
     const input = document.querySelector('input[type=text]');
+
+
+    pencil.addEventListener('click', function() {
+        input.classList.toggle('display');
+    });
 
 
     function createTodo() {
@@ -28,8 +35,8 @@ function onPageLoaded() {
     }
 
     function onClickTodo(event) {
-        if (event.target.tagName === 'LI') {
-            event.target.classList.toogle('checked');
+        if (event.target.tagName === 'LI' || 'SPAN') {
+            event.target.classList.toggle('checked');
         };
     }
 
