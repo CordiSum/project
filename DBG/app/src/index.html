@@ -131,19 +131,19 @@
             <div class="DBG__row">
                 <div class="DBG__col">
                     <div class="DBG__wrap-menu">
-                        <div class="DBG__wrap-menu__nav">
+                        <div class="DBG__wrap-menu__nav" id="filters">
                             <ul class="DBG__wrap-menu__nav-ul">
-                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Все">
-                                    <span class="DBG__wrap-menu__nav-button">
+                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Все" data-filter="*">
+                                    <span class="DBG__wrap-menu__nav-button is-checked">
                                         <i class="fa fa-th-large fa-lg"></i>
                                     </span>
                                 </li>
-                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Видео">
+                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Видео" data-filter=".video">
                                     <span class="DBG__wrap-menu__nav-button">
                                         <i class="fa fa-play fa-lg"></i>
                                     </span>
                                 </li>
-                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Эл. книга">
+                                <li class="DBG__wrap-menu__nav-li" title data-original-title="Эл. книга" data-filter=".book">
                                     <span class="DBG__wrap-menu__nav-button">
                                         <i class="fa fa-book fa-lg"></i>
                                     </span>
@@ -164,8 +164,8 @@
         <div class="DBG__container">
             <div class="DBG__row">
                 <div class="DBG__col">
-                    <div class="DBG__wrap-item">
-                        <div class="DBG__wrap-item__block">
+                    <div class="DBG__wrap-item" id="sorts">
+                        <div class="DBG__wrap-item__block video">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">                                    
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -178,7 +178,8 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        
+                        <div class="DBG__wrap-item__block video" data-category="transition">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -191,7 +192,7 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        <div class="DBG__wrap-item__block video">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -204,7 +205,7 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        <div class="DBG__wrap-item__block video">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -217,7 +218,7 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        <div class="DBG__wrap-item__block video">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -230,7 +231,7 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        <div class="DBG__wrap-item__block video">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -243,7 +244,7 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="DBG__wrap-item__block">
+                        <div class="DBG__wrap-item__block book">
                             <p class="DBG__wrap-item__box">
                                 <a class="DBG__wrap-item__links" href="#">                                    
                                     <span class="DBG__wrap-item__topic-wrap">
@@ -274,8 +275,9 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </body>
 
 </html>

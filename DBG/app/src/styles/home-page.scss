@@ -126,13 +126,12 @@
     }
 
     &__text {        
-        @include fonts(13px, 13px)
+        @include fonts(13px, 13px);
         color: #fff;
         background: #555555;
         padding: 5px 20px 5px;
         letter-spacing: 0;
     }
-
     &__icon {
         margin-top: 24px;
         border: 2px solid #fff;
