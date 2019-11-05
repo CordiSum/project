@@ -14,15 +14,15 @@ $xs-max: 575px;
   padding: 0 15px;
   margin: 0 auto;
 
-  @media (min-width: $lg-min) {
+  @media (min-width: 900px) {
     max-width: 900px;
   }
 
-  @media (min-width: $md-min) {
-    max-width: 800px;
+  @media (max-width: 890px) {
+    max-width: 678px;
   }
 
-  @media (min-width: $sm-min) {
-    max-width: 520px;
+  @media (max-width: $sm-max) {
+    max-width: 464px;
   }
 }

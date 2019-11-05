@@ -1,9 +1,9 @@
-const lpName = '';
+const lpName = 'DBG-iframe';
 const syntax = 'scss';
 const directories = {
   src: './app/src/',
   dev: './app/dev/',
-  public: `../../${lpName}/`,
+  public: `../${lpName}/`,
   css: 'styles/',
   js: 'js/',
   fonts: 'fonts/',

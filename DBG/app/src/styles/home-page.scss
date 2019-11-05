@@ -2,16 +2,56 @@
 .DBG__wrap-header {
     display: flex;
     justify-content: space-between;
-    height: 50px;
     align-items: center;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    padding: 0 15px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+
+    &__h1 {
+        @media (max-width: $sm-max) {
+            margin: 0 auto;
+            line-height: 26px;
+        }
+    }
+
+    &__lang {
+        @media (max-width: $sm-max) {
+            margin-left: auto;
+        }
+    }
 
     &__h1 {
         @include fonts(16px, 16px, 600);
         text-transform: uppercase;
         color: #333;
+    }
+
+    &__breadcrumbs {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    &__breadcrumbs-btn,
+    &__breadcrumbs-now {
+        color: #fff;
+        font-size: 14pt;
+        border-radius: 5px;
+        padding: 0px 15px 0px;
+        max-height: 40px;
+        line-height: 40px;
+    }
+
+    &__breadcrumbs-btn {
+        background: #4CB4A9;
+    }
+    &__breadcrumbs-now {
+        background: #6EBE71;
+    }
+    &__breadcrumbs-separator{
+        font-size: 16pt;
+        margin: 9px 5px 0px;
     }
 }
 
@@ -19,6 +59,17 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 15px;
+
+    @media (max-width: $sm-max) {
+        flex-direction: column-reverse;
+    }
+
+    &__nav {
+        @media (max-width: $sm-max) {
+            margin: 10px auto;
+        }
+    }
+
 
     &__nav-ul {
         display: flex;
@@ -66,6 +117,7 @@
     justify-content: center;
 
 
+
     &__block {
         display: inline-block;
         margin: 0 3px 6px;
@@ -73,6 +125,20 @@
         @include backgroundImage('img-1.jpg', cover);
         width: 210px;
         height: 210px;
+
+
+        @media (max-width: 476px) {
+            left: 24% !important;
+        }
+        @media (max-width: 425px) {
+            left: 21% !important;
+        }
+        @media (max-width: 375px) {
+            left: 17% !important;
+        }
+        @media (max-width: 359px) {
+            left: 11% !important;
+        }
     }
 
     &__box {
@@ -140,4 +206,119 @@
         width: 50px;
         height: 50px;
     }
+}
+
+.DBG__wrap-lessons {
+    display: flex;
+    padding: 20px 15px;
+
+    &__sidebar {
+        width: 34%;
+        position: relative;
+    }
+
+    &__headings {
+        width: 66%;
+    }
+    &__sidebar__img {
+        @include backgroundImage('img-2.jpg', cover, center);
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__sidebar__wrap-text {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        width: 250px;
+        min-height: 250px;
+        color: #fff;
+        background-color: #000;
+        opacity: 0.7;
+        padding: 60px 0 0;
+    }
+
+    &__sidebar__wrap-text-h2 {
+        @include fonts(26px, 30px);
+        color: #fff;
+        margin: 0 auto;
+        letter-spacing: -1px;
+    }
+
+    &__sidebar__num-les {
+        display: block;
+        background-color: #555555;
+        padding: 2px 10px 2px;
+        max-width: 175px;
+        margin: 8px auto;
+        opacity: 1;
+    }
+
+    &__sidebar__sub-text {
+        padding: 2px 14px 2px;
+        width: 180px;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    &__bar {
+        width: 100%;
+        min-height: 50px;
+        margin: 1px 0 0;
+        padding: 15px 10px 0;
+        background-color: #dbdbdb;
+    }
+
+    &__bar-links {
+        @include fonts(19px, 22px);
+        margin: 0 5px 0;
+
+        &:hover {
+            text-decoration: underline;
+            margin: 0 5px 0;
+        }
+    }
+
+    &__bar:nth-child(2n) {
+        background-color: #fff;
+    }
+    .cercale {
+        border: 1px solid #828282;
+        font-size: 10pt;
+        border-radius: 50px;
+        padding: 5px 5px 5px;
+        color: #4CB4A9;
+    }    
+}
+
+.DBG__wrap-description-text {
+    @include fonts(11px, 14px);
+    margin: 10px 0 25px;
+}
+
+.DBG__video-bar {
+    margin-top: 20px;
+    margin-left: auto;
+
+        &__btn-prev,
+        &__btn-next {
+            background: #4CB4A9;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12pt;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            padding: 5px 10px 5px;
+            box-shadow: 0px 0px 1px #ddd;
+            max-height: 25px;
+            line-height: 25px;
+    }
+}
+
+.DBG__video-container {
+    width: 900px;
+    height: 530px;
 }
