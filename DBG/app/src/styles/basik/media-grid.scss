@@ -18,11 +18,11 @@ $xs-max: 575px;
     max-width: 900px;
   }
 
-  @media (max-width: 890px) {
-    max-width: 678px;
-  }
+  // @media (max-width: 890px) {
+  //   max-width: 678px;
+  // }
 
-  @media (max-width: $sm-max) {
-    max-width: 464px;
-  }
+  // @media (max-width: $sm-max) {
+  //   max-width: 464px;
+  // }
 }
