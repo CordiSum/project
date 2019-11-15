@@ -65,12 +65,12 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 60px;
+    width: 34px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: transparent;
+    background-image: url(../images/arrow.png);
     color: transparent;
     top: 50%;
     -webkit-transform: translate(0, -50%);
@@ -81,7 +81,7 @@ $slick-opacity-not-active: 0.25 !default;
     outline: none;
     &:hover, &:focus {
         outline: none;
-        background: transparent;
+        background: #000;
         color: transparent;
         &:before {
             opacity: $slick-opacity-on-hover;
@@ -103,6 +103,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
     left: -25px;
+    background-position: top left;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
@@ -117,6 +118,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-next {
     right: -25px;
+    background-position: top right;
     [dir="rtl"] & {
         left: -25px;
         right: auto;
@@ -168,6 +170,7 @@ $slick-opacity-not-active: 0.25 !default;
             margin-bottom: 15px;
             background-image: -webkit-linear-gradient(90deg, #eee 0%, white 100%);
             &:hover, &:focus {
+                background-image: -webkit-linear-gradient(360deg, #eee 0%, white 100%);
                 outline: none;
                 &:before {
                     opacity: $slick-opacity-on-hover;
@@ -191,6 +194,21 @@ $slick-opacity-not-active: 0.25 !default;
         &.slick-active button {
             background: #56a6dc !important;
         }
+    }
+
+    @media (max-width: 1199px) {
+        position: relative;
+        top: 30px;
+
+        li button{
+            padding: 9px 16px;            
+        }
+        button {
+            margin: 0 1%;
+        }
+    }
+    @media (max-width: 799px) {
+        top: 20px;
     }
 }
 
@@ -304,10 +322,17 @@ $slick-opacity-not-active: 0.25 !default;
     position: relative;
     margin-top: 60px;
     padding: 50px 0;
+    @media (max-width: 1199px) {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .DBG__slider {
     padding: 40px 30px;
+    @media (max-width: 799px) {
+        padding: 20px 15px;
+    }
 }
 .DBG__panel-wrapper {
     font-size: 14px;
@@ -338,5 +363,8 @@ $slick-opacity-not-active: 0.25 !default;
     }
     p {
         margin: 0 0 10px;
+    }
+    @media (max-width: 799px) {
+        padding: 0 15px;
     }
 }
