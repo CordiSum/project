@@ -4,6 +4,13 @@ import 'slick-carousel';
 window.$ = $;
 window.jQuery = $;
 
+$(window).on('load', function () {
+  var $preloader = $('#DBG__education'),
+      $svg_anm   = $preloader.find('.DBG__loading');
+  $svg_anm.fadeOut();
+  $preloader.delay(350).fadeOut('slow');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // init Isotope
@@ -31,13 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             arrows: false,
           }
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
