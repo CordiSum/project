@@ -74,7 +74,7 @@
 // };
 // obj.sum();
 
-
+// ---------------------
 // 4)
 // let user = {
 //     name: "jone"
@@ -88,6 +88,7 @@
 // console.log(sayName.call(user, 'Smith'));
 // console.log(sayName.apply(user, ['Snow']));
 
+// ---------------------
 // function count(number) {
 //     return this * number;
 // }
@@ -96,6 +97,7 @@
 // console.log(double(3));
 // console.log(double(10));
 
+// -----------------------
 let btn = document.querySelector('button');
 btn.addEventListener('click', function() {
     console.log(this);
