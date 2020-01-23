@@ -1,0 +1,13 @@
+
+
+
+.spoiler_links h2:after {
+    display: block;
+    content: "+";
+    color: #1689f2;
+    font-size: 32px;
+    font-weight: 800;
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
