@@ -1,5 +1,65 @@
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.DB__header {
+    h1 {
+        @include fonts(36px, 47px,);
+        color: #1689F2;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+    }
+    &__wrap-items {
+        &_icon-testing {
+            @include backgroundImage('/icon-testing.png', cover);
+            width: 63px;
+            height: 54px;
+        }
+        &_icon-positive {
+            @include backgroundImage('images/icon-positive.png', cover);
+            width: 63px;
+            height: 54px;
+        }
+        width: 50%;
+        &_topic {
+            @include fonts(15px, 22px, 600);
+            color: #000000;
+        }
+        &_short-description {
+            @include fonts(15px, 22px);
+            color: #2D3436;
+        }
+    }
+}
 
+//  ================================
+//          SPLOILER 
+// ================================
+// Spoiler text
+.spoiler_body {
+    display: none;
+}
+
+.spoiler_links {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.spoiler_links h2 {
+    // font-size: 24px;
+    // line-height: 29px;
+    // line-height: 62px !important;
+    // color: #1F1F1F;
+    font-size: 24px;
+    line-height: 29px;
+    line-height: 62px!important;
+    color: #1f1f1f;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
 
 .spoiler_links h2:after {
     display: block;
@@ -8,6 +68,33 @@
     font-size: 32px;
     font-weight: 800;
     position: absolute;
-    top: 8px;
+    top: 24px;
     right: 0;
+}
+
+.spoiler_links h2:before {
+    display: block;
+    content: "-";
+    color: #1689f2;
+    font-size: 32px;
+    font-weight: 800;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.spoiler_wrap {
+    display: block;
+    position: relative;
+    border-top: 1px solid #E3E3E3;
+}
+
+.spoiler_wrap-2 {
+    display: block;
+    position: relative;
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.spoiler-icon-toggle:after {
+    content: '-'!important;
 }
