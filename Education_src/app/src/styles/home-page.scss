@@ -115,25 +115,41 @@ body {
     }
     &__item-sum-video-wrap {
         position: absolute;
-        display: block;
-        top: 30px;
-        left: 30px;
+        display: inline-block;
+        top: 32px;
+        left: 26px;
         color: #fff;
         font-weight: 600;
         opacity: 0;
         transition: all 0.5s ease;
         .icon-play {
-            padding: 20px;
+            width: 40px;
+            height: 31px;
             display: inline-block;
             border: 2px solid #1689F2;
-            border-radius: 2px;
+            border-radius: 3px;
+            &:before {
+                content: "\25B6";
+                display: inline-block;
+                color: #fff;
+                @include fonts(34px, 0px);
+                margin: 11px 0px 0 10px;
+            }
         }
+    }
+    &__item-sum-video-text {
+        display: flex;
+        span {
+            padding-left: 15px;
+            line-height: 30px;
+        }     
     }
     &__wrap-text-lesson {
         transition: all 0.5s ease;
         position: absolute;
         top: 280px;
         padding-left: 30px;
+
     }
     &__wrap-text-lesson_title {
         @include fonts(22px, 27px, 500);
