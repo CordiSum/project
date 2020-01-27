@@ -16,12 +16,12 @@ body {
     &__wrap-items {
         position: relative;
         padding: 0 20px;
-
+        width: 50%;
         &_text {
             padding-left: 88px;
         }
         &_icon-testing {
-            @include backgroundImage('icon-testing.png');
+            @include backgroundImage('icon-testing.png', cover);
             position: absolute;
             display: block;
             width: 63px;
@@ -30,11 +30,11 @@ body {
         &_icon-positive {
             display: block;
             position: absolute;
-            @include backgroundImage('icon-positive.png');
+            @include backgroundImage('icon-positive.png', cover);
             width: 53px;
             height: 50px;
         }
-        width: 50%;
+        
         &_topic {
             @include fonts(15px, 22px, 600);
             color: #000000;
@@ -44,8 +44,48 @@ body {
             color: #2D3436;
         }
     }
-}
 
+    @media (max-width: 1152px) {
+        &__wrap-items {
+            &_short-description {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 854px) {
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            padding: 32px 0 15px;
+        }
+        &__wrap-items {
+            width: 100%;
+            margin-bottom: 35px;
+            &_text {
+                padding-left: 0;
+            }
+            &_topic {
+                padding-left: 70px;
+                padding-top: 10px;
+            }
+            &_icon-testing {
+                width: 50px;
+                height: 43px;
+            }
+            &_icon-positive {
+                width: 46px;
+                height: 43px;            
+            }
+            &_short-description {
+                padding-top: 16px;
+            }
+        }
+
+    }
+}
 
 // =================================
 // CONTENT
@@ -61,11 +101,10 @@ body {
         padding: 60px 0 100px;
         flex-wrap: wrap;
     }
-    &__lesson-links {
+    &__lesson {
         width: 50%;
         padding: 0 20px;
     }
-
     &__wrap-item-lesson {
         height: 440px;
         position: relative;
@@ -93,6 +132,7 @@ body {
             }
             .DB__content__btn-page {
                 opacity: 1;
+                z-index: 1;
                 &:hover {
                     background: #0060b9;
                 }
@@ -149,6 +189,8 @@ body {
         position: absolute;
         top: 280px;
         padding-left: 30px;
+        width: 490px;
+        max-width: 100%;
 
     }
     &__wrap-text-lesson_title {
@@ -171,6 +213,40 @@ body {
         padding: 24px;
         text-transform: uppercase;
         font-weight: bold;
+        z-index: -1;
+    }
+    @media (max-width: 854px) {
+        &_wrap {
+            flex-direction: column;
+            padding: 25px 0 70px;
+        }
+        &__lesson {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: 576px) {
+        &__wrap-item-lesson {
+            &:hover {
+                .DB__content__wrap-text-lesson {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+        &__wrap-text-lesson {
+            padding-left: 0;
+        }
+    }
+    @media (max-width: 440px) {
+        &__btn-page {
+            bottom: 24px;
+        }
+        &__wrap-item-lesson {
+            height: 460px;
+        }
     }
 }
 
@@ -181,12 +257,10 @@ body {
 .spoiler_body {
     display: none;
 }
-
 .spoiler_links {
     text-decoration: none !important;
     cursor: pointer;
 }
-
 .spoiler_links h2 {
     // font-size: 24px;
     // line-height: 29px;
@@ -227,14 +301,104 @@ body {
     position: relative;
     border-top: 1px solid #E3E3E3;
 }
-
 .spoiler_wrap-2 {
     display: block;
     position: relative;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
 }
-
 .spoiler-icon-toggle:after {
     content: '-'!important;
+}
+
+//  ================================
+//          VIDEO-LIST 
+// ================================
+
+.DB__wrap-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.DB__wrap-text {
+    display: block;
+    width: 50%;
+    &_topic {
+        @include fonts(17px, 22px, 600);
+        color: #000000;
+        margin-bottom: 10px;        
+    }
+    &_subtext {
+        @include fonts(15px, 22px, 500);
+        color: #2D3436;
+        margin-bottom: 50px;
+        max-width: 480px;
+    }
+    p {
+        max-width: 530px;
+        font-size: 17px;
+        line-height: 31px;
+    }
+}
+.DB__wrap-list {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    &__bar-links {
+        display: block;
+    }
+    &__bar-links:nth-child(2n) &__bar {
+        background-color: #fff;
+        &:hover {
+            background-color: #E9ECEF;
+        }
+    }
+    &__bar {
+        position: relative;
+        display: block;
+        width: 449px;
+        height: 70px;
+        background-color: #F7F7F7;
+        .i-play {
+            width: 19px;
+            height: 19px;
+            display: inline-block;
+            border: 2px solid #1689F2;
+            border-radius: 3px;
+            transform: translateY(-50%);
+            left: 24px;
+            top: 50%;
+            position: absolute;
+            &:before {
+                content: "\25B6";
+                display: inline-block;
+                color: #1689F2;
+                @include fonts(19px, 0px);
+                margin: 6px 0px 0 3px;
+                position: absolute;
+            }
+        }
+        .lesson-time {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 400;
+            color: #A8A8A8;
+        }
+        &:hover {
+            background-color: #E9ECEF;
+        }
+    }
+    &__bar-text {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 60px;
+        font-weight: 500;
+    }
+
 }
