@@ -29,8 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('#DBG__myslider').slick({
       arrows: true,
-      dots: true,
+      dots: false,
       adaptiveHeight: true,
+      prevArrow: $('.custom-arrow-prev'),
+      nextArrow: $('.custom-arrow-next'),
       responsive: [
         {
           breakpoint: 1054,
