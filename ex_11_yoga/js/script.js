@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
         let hours = timer.querySelector('.hours');
         let minutes = timer.querySelector('.minutes');
         let seconds = timer.querySelector('.seconds');
-        timeInterval = setInterval(updateClock, 1000);
+        let timeInterval = setInterval(updateClock, 1000);
 
         function updateClock() {
             let t = getTimeRemaining(endtime);
@@ -82,6 +82,7 @@ window.addEventListener('DOMContentLoaded', function() {
 let more = document.querySelector('.more');
 let overlay = document.querySelector('.overlay');
 let close = document.querySelector('.popup-close');
+let descriptionBtn = document.querySelectorAll('.description-btn');
 
 more.addEventListener('click', function() {
     overlay.style.display ='block';
@@ -94,5 +95,13 @@ close.addEventListener('click', function() {
     more.classList.remove('more-splash');
     document.body.style.overflow ='';
 });
+
+descriptionBtn.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        overlay.style.display ='block';
+        this.classList.add('more-splash');
+        document.body.style.overflow ='hidden';
+    });
+  });
 
 // END MODAL WINDOW
