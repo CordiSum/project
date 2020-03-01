@@ -4,7 +4,7 @@
 //     return a + b;
 // }
 
-// var il
+// var i
 // console.log(i); //undefinded
 // var i = 42;
 // console.log(i); //42
