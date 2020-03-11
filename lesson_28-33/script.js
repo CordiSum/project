@@ -88,7 +88,6 @@ caclOrDouble(6);
 
 
 // ======================= Классы
-
 class Rectangle {
     constructor(height, width) { // можно использовать параметры по умолчанию напр. width = 20
         this.height = height;
