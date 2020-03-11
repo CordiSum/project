@@ -27,41 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // slick-slider
 
-    $('#DBG__myslider').slick({
-      arrows: true,
-      dots: false,
-      adaptiveHeight: true,
-      prevArrow: $('.custom-arrow-prev'),
-      nextArrow: $('.custom-arrow-next'),
-      responsive: [
-        {
-          breakpoint: 1054,
-          settings: {
-            arrows: false,
-          }
-        },
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
 
-
-    // $('#DBG__myslider').slick({
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   arrows: false,
-    //   fade: true,
-    //   asNavFor: '#DBG__myslider-nav-ul'
-    // });
-    // $('#DBG__myslider-nav-ul').slick({
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   asNavFor: '#DBG__myslider',
-    //   dots: true,
-    //   centerMode: true,
-    //   focusOnSelect: true
-    // });
-
-  
 });

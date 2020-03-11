@@ -15,32 +15,22 @@ class Options {
         this.textAlign = textAlign;
     }
 
-    newDiv() {
+    createDiv(text) {
         var  div = document.createElement('div');
-        div = document.body.appendChild(div);
+        div.style.cssText = this.cssText();
+        div.innerText = text;
+        document.body.appendChild(div);
+        
         return div;
+    }
+
+    cssText() {
+        return `height: ${this.height}px; width: ${this.width}px; background-color: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.textAlign};`
     }
 }
 
-var blockDiv = new Options( 50, 300);
-var cssText = new Options( '', '', 'red', 24, 'center' )
+
+var newDiv = new Options( 50, 300, 'red', 24, 'center' )
 
 
-console.log(blockDiv.newDiv('asddas'));
-
-
-
-
-// class Rectangle {
-//     constructor(height, width) { // можно использовать параметры по умолчанию напр. width = 20
-//         this.height = height;
-//         this.width = width;
-//     }
-//     calcArea() {
-//         return this.height * this.width;
-//     }
-// }
-
-// const square = new Rectangle(10, 10);
-
-// console.log(square.calcArea());
+newDiv.createDiv('BLOCK');

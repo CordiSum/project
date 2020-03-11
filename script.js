@@ -442,8 +442,3 @@ var box = document.getElementById('box'),
     console.log(div);
 // ============================================
 
-
-
-
-
-
