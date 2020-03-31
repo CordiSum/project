@@ -1,4 +1,4 @@
-const lpName = 'Star_wars';
+const lpName = 'Star_wars_API';
 const syntax = 'scss';
 const directories = {
   src: './app/src/',

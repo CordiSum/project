@@ -1,4 +1,6 @@
 .page-wrapper {
+    display: flex;
+    flex-flow: row;
     padding: 50px;
 }
 .character {
