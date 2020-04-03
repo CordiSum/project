@@ -1,8 +1,41 @@
 .page-wrapper {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     padding: 50px;
 }
-.character {
+
+.wrap-peoples,
+.wrap-films,
+.wrap-starships {
+    display: flex;
+}
+#people {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.people_link {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
     margin-bottom: 10px;
+}
+
+
+#episode {
+    display: flex;
+    margin: 20px;
+}
+.film_link {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px ;
+}
+.description {
+    font-weight: 600;
+}
+.films {
+    display: flex;
+    flex-direction: column;
 }
