@@ -78,53 +78,85 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // FORM
 
+    // let message = {
+    //     loading: 'Загрузка...',
+    //     success: 'Thanks, скоро мы с Вами свяжемся',
+    //     failure: 'Что-то пошло не так...'
+    // }
+
+    // let form = document.querySelector('.main-form');
+    // let input = form.getElementsByTagName('input');
+    // let statusMessage = document.createElement('div');
+
+    // statusMessage.classList.add('status');
+
+    // form.addEventListener('submit', function(event) {
+    //     event.preventDefault();
+    //     form.appendChild(statusMessage);
+
+    //     let request = new XMLHttpRequest();
+    //     request.open('POST', 'server.php');
+    //     // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //отправка на сервер в обычном формате
+    //     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+
+    //     let formData = new FormData(form);
+
+    //     let obj = {}; //создаем промежуточный объект для преобразования в JSON
+    //     formData.forEach(function(value, key) {
+    //         obj[key] = value;
+    //     });
+    //     let json = JSON.stringify(obj); // метод stringify превращаем JS объект в JSON
+
+    //     //request.send(formData); // для обычной отправки
+    //     request.send(json);//для отвравки JSON
+
+    //     request.addEventListener('readystatechange', function() {
+    //         if (request.readyState < 4) {
+    //             statusMessage.innerHTML = message.loading;
+    //         } else if (request.readyState === 4 && request.status == 200) {
+    //             statusMessage.innerHTML = message.success;
+    //         } else {
+    //             statusMessage.innerHTML = message.failure;
+    //         }
+    //     });
+
+    //     for (let i = 0; i < input.length; i++) {
+    //         input[i].value = '';
+    //     }
+
+    // });
+
+
+    // ==================.
     let message = {
         loading: 'Загрузка...',
         success: 'Thanks, скоро мы с Вами свяжемся',
         failure: 'Что-то пошло не так...'
     }
-
+    
     let form = document.querySelector('.main-form');
-    let input = form.getElementsByTagName('input');
     let statusMessage = document.createElement('div');
-
+    let formData = new FormData(form);
+    
     statusMessage.classList.add('status');
-
-    form.addEventListener('submit', function(event) {
+    
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
         form.appendChild(statusMessage);
-
-        let request = new XMLHttpRequest();
-        request.open('POST', 'server.php');
-        // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //отправка на сервер в обычном формате
-        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-
-
-        let formData = new FormData(form);
-
-        let obj = {}; //создаем промежуточный объект для преобразования в JSON
-        formData.forEach(function(value, key) {
-            obj[key] = value;
-        });
-        let json = JSON.stringify(obj); // метод stringify превращаем JS объект в JSON
-
-        //request.send(formData); // для обычной отправки
-        request.send(json);//для отвравки JSON
-
-        request.addEventListener('readystatechange', function() {
-            if (request.readyState < 4) {
-                statusMessage.innerHTML = message.loading;
-            } else if (request.readyState === 4 && request.status == 200) {
-                statusMessage.innerHTML = message.success;
-            } else {
-                statusMessage.innerHTML = message.failure;
-            }
-        });
-
-        for (let i = 0; i < input.length; i++) {
-            input[i].value = '';
-        }
-
+    
+        fetch('server.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            statusMessage.innerHTML = message.success
+        })
+        .catch(statusMessage.innerHTML = message.failure)
     });
 
 });
