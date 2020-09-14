@@ -163,9 +163,14 @@ newNumbers.a = 10;
 console.log(newNumbers);
 console.log(numbers);
 
+// =============
+
 const add = {
     d:   17,
-    i: 20
+    i: 20,
+    c: {
+        a:19
+    }
 };
 
 const clone = Object.assign({}, add);
